@@ -1,0 +1,59 @@
+{
+  "name": "SchoolFee",
+  "type": "object",
+  "properties": {
+    "student_name": {
+      "type": "string"
+    },
+    "student_email": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "number",
+      "description": "Amount paid in USD"
+    },
+    "fee_type": {
+      "type": "string",
+      "enum": [
+        "registration",
+        "semester",
+        "technology",
+        "graduation",
+        "donation"
+      ],
+      "default": "semester"
+    },
+    "payment_method": {
+      "type": "string",
+      "enum": [
+        "bank_transfer",
+        "mobile_money",
+        "cash",
+        "online"
+      ],
+      "default": "online"
+    },
+    "reference": {
+      "type": "string",
+      "description": "Payment reference number"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "confirmed",
+        "failed"
+      ],
+      "default": "pending"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "student_name",
+    "student_email",
+    "amount",
+    "fee_type"
+  ]
+}
