@@ -1,0 +1,71 @@
+{
+  "name": "Course",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Course title"
+    },
+    "description": {
+      "type": "string",
+      "description": "Course description"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "Technology",
+        "Business",
+        "Health",
+        "Education",
+        "Life Skills",
+        "Agriculture",
+        "Arts",
+        "Languages"
+      ],
+      "description": "Course category"
+    },
+    "level": {
+      "type": "string",
+      "enum": [
+        "Beginner",
+        "Intermediate",
+        "Advanced"
+      ],
+      "default": "Beginner"
+    },
+    "instructor_name": {
+      "type": "string",
+      "description": "Name of the instructor"
+    },
+    "duration_weeks": {
+      "type": "number",
+      "description": "Duration in weeks"
+    },
+    "thumbnail_url": {
+      "type": "string",
+      "description": "Course thumbnail image URL"
+    },
+    "is_free": {
+      "type": "boolean",
+      "default": true,
+      "description": "Is this course free?"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "published",
+        "archived"
+      ],
+      "default": "published"
+    },
+    "total_enrolled": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "required": [
+    "title",
+    "category"
+  ]
+}
