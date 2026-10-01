@@ -1,0 +1,52 @@
+{
+  "name": "Payment",
+  "type": "object",
+  "properties": {
+    "student_name": {
+      "type": "string"
+    },
+    "student_email": {
+      "type": "string",
+      "description": "Email of the student who paid (used to match access)"
+    },
+    "amount": {
+      "type": "number",
+      "description": "Amount paid in USD"
+    },
+    "purpose": {
+      "type": "string",
+      "description": "What the payment unlocks, e.g. an ebook title or 'Live Classes'"
+    },
+    "reference": {
+      "type": "string",
+      "description": "Transaction reference from the external payment link"
+    },
+    "payment_method": {
+      "type": "string",
+      "enum": [
+        "paystack",
+        "momo",
+        "paypal",
+        "stripe",
+        "card"
+      ],
+      "default": "momo"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "confirmed",
+        "failed"
+      ],
+      "default": "pending"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "student_email",
+    "reference"
+  ]
+}
