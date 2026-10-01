@@ -1,0 +1,44 @@
+{
+  "name": "Assignment",
+  "type": "object",
+  "properties": {
+    "course_id": {
+      "type": "string"
+    },
+    "course_title": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string",
+      "description": "Assignment title"
+    },
+    "instructions": {
+      "type": "string",
+      "description": "Full assignment instructions"
+    },
+    "due_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "max_points": {
+      "type": "number",
+      "default": 100
+    },
+    "instructor_name": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "open",
+        "closed"
+      ],
+      "default": "open"
+    }
+  },
+  "required": [
+    "course_id",
+    "title",
+    "instructions"
+  ]
+}
