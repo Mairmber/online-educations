@@ -1,0 +1,74 @@
+{
+  "name": "AirtimeCode",
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "string",
+      "description": "The USSD-style airtime or data code"
+    },
+    "network": {
+      "type": "string",
+      "enum": [
+        "MTN",
+        "Airtel",
+        "Glo",
+        "9mobile",
+        "Vodacom",
+        "Telkom",
+        "Orange",
+        "Universal"
+      ],
+      "description": "Mobile network provider"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "airtime",
+        "data"
+      ],
+      "description": "Whether this is an airtime or internet data code"
+    },
+    "value": {
+      "type": "string",
+      "description": "The value e.g. N100, 1GB, $2"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "used",
+        "expired"
+      ],
+      "default": "active",
+      "description": "Current status of the code"
+    },
+    "beneficiary_name": {
+      "type": "string",
+      "description": "Name of the person this code was assigned to"
+    },
+    "beneficiary_phone": {
+      "type": "string",
+      "description": "Phone number of the beneficiary"
+    },
+    "distributed_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When the code was distributed"
+    },
+    "used_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When the code was used/redeemed"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Any additional notes"
+    }
+  },
+  "required": [
+    "code",
+    "network",
+    "type",
+    "value"
+  ]
+}
