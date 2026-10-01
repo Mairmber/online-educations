@@ -1,0 +1,40 @@
+{
+  "name": "Certificate",
+  "type": "object",
+  "properties": {
+    "student_name": {
+      "type": "string"
+    },
+    "student_email": {
+      "type": "string"
+    },
+    "course_id": {
+      "type": "string"
+    },
+    "course_title": {
+      "type": "string"
+    },
+    "enrollment_id": {
+      "type": "string"
+    },
+    "certificate_code": {
+      "type": "string",
+      "description": "Unique verification code shown on the certificate"
+    },
+    "issue_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "progress_percent": {
+      "type": "number",
+      "default": 100
+    }
+  },
+  "required": [
+    "student_name",
+    "student_email",
+    "course_id",
+    "course_title",
+    "certificate_code"
+  ]
+}
