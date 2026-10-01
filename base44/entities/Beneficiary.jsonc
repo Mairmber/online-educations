@@ -1,0 +1,58 @@
+{
+  "name": "Beneficiary",
+  "type": "object",
+  "properties": {
+    "full_name": {
+      "type": "string",
+      "description": "Full name of the beneficiary"
+    },
+    "phone_number": {
+      "type": "string",
+      "description": "Phone number of the beneficiary"
+    },
+    "network": {
+      "type": "string",
+      "enum": [
+        "MTN",
+        "Airtel",
+        "Glo",
+        "9mobile",
+        "Vodacom",
+        "Telkom",
+        "Orange",
+        "Universal"
+      ],
+      "description": "Their mobile network"
+    },
+    "location": {
+      "type": "string",
+      "description": "Area or location of the beneficiary"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "widow",
+        "poor",
+        "needy",
+        "student",
+        "elderly",
+        "disabled",
+        "other"
+      ],
+      "description": "Category of the beneficiary"
+    },
+    "total_codes_received": {
+      "type": "number",
+      "default": 0,
+      "description": "Total number of codes received"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional notes about the beneficiary"
+    }
+  },
+  "required": [
+    "full_name",
+    "phone_number"
+  ]
+}
