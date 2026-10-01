@@ -1,0 +1,50 @@
+{
+  "name": "Ebook",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "author": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "cover_image_url": {
+      "type": "string"
+    },
+    "file_url": {
+      "type": "string",
+      "description": "Direct link to the downloadable file (PDF, EPUB, etc.)"
+    },
+    "price": {
+      "type": "number",
+      "default": 0,
+      "description": "Amount in GHS. 0 = free"
+    },
+    "category": {
+      "type": "string",
+      "default": "General"
+    },
+    "level": {
+      "type": "string",
+      "enum": [
+        "JHS",
+        "SHS",
+        "University",
+        "Adult",
+        "All"
+      ],
+      "default": "All"
+    },
+    "downloads": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "required": [
+    "title",
+    "file_url"
+  ]
+}
