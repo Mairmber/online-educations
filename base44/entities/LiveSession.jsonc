@@ -1,0 +1,60 @@
+{
+  "name": "LiveSession",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Live class / session title"
+    },
+    "subject": {
+      "type": "string",
+      "description": "Subject or category"
+    },
+    "level": {
+      "type": "string",
+      "enum": [
+        "JHS",
+        "SHS",
+        "University",
+        "Adult",
+        "All"
+      ],
+      "default": "All"
+    },
+    "host_name": {
+      "type": "string",
+      "description": "Teacher / tutor / lecturer hosting the session"
+    },
+    "scheduled_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When the live session starts"
+    },
+    "duration_minutes": {
+      "type": "number",
+      "default": 60
+    },
+    "room_id": {
+      "type": "string",
+      "description": "Unique room slug used for the video meeting"
+    },
+    "description": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "scheduled",
+        "live",
+        "ended"
+      ],
+      "default": "scheduled"
+    }
+  },
+  "required": [
+    "title",
+    "host_name",
+    "scheduled_date",
+    "room_id"
+  ]
+}
