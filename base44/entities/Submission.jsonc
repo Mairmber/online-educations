@@ -1,0 +1,55 @@
+{
+  "name": "Submission",
+  "type": "object",
+  "properties": {
+    "assignment_id": {
+      "type": "string"
+    },
+    "assignment_title": {
+      "type": "string"
+    },
+    "course_id": {
+      "type": "string"
+    },
+    "course_title": {
+      "type": "string"
+    },
+    "student_name": {
+      "type": "string"
+    },
+    "student_email": {
+      "type": "string"
+    },
+    "answer_text": {
+      "type": "string",
+      "description": "Student's written answer"
+    },
+    "file_url": {
+      "type": "string",
+      "description": "Optional uploaded file"
+    },
+    "grade": {
+      "type": "number",
+      "description": "Points awarded by instructor"
+    },
+    "feedback": {
+      "type": "string",
+      "description": "Instructor feedback"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "submitted",
+        "graded",
+        "returned"
+      ],
+      "default": "submitted"
+    }
+  },
+  "required": [
+    "assignment_id",
+    "student_name",
+    "student_email",
+    "answer_text"
+  ]
+}
