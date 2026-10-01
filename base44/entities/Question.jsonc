@@ -1,0 +1,54 @@
+{
+  "name": "Question",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "The question or problem title"
+    },
+    "body": {
+      "type": "string",
+      "description": "Full description of the problem"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "Technology",
+        "Business",
+        "Health",
+        "Education",
+        "Life Skills",
+        "Agriculture",
+        "Arts",
+        "Languages",
+        "Jobs & Career",
+        "Other"
+      ],
+      "description": "Category of the question"
+    },
+    "asked_by_name": {
+      "type": "string"
+    },
+    "asked_by_email": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "open",
+        "answered",
+        "closed"
+      ],
+      "default": "open"
+    },
+    "answer": {
+      "type": "string",
+      "description": "AI or expert answer"
+    }
+  },
+  "required": [
+    "title",
+    "body",
+    "category"
+  ]
+}
