@@ -1,0 +1,35 @@
+{
+  "name": "Lesson",
+  "type": "object",
+  "properties": {
+    "course_id": {
+      "type": "string",
+      "description": "ID of the parent course"
+    },
+    "title": {
+      "type": "string",
+      "description": "Lesson title"
+    },
+    "content": {
+      "type": "string",
+      "description": "Lesson content / text"
+    },
+    "video_url": {
+      "type": "string",
+      "description": "Optional video URL"
+    },
+    "order": {
+      "type": "number",
+      "default": 1,
+      "description": "Order within the course"
+    },
+    "duration_minutes": {
+      "type": "number",
+      "description": "Estimated reading/watch time"
+    }
+  },
+  "required": [
+    "course_id",
+    "title"
+  ]
+}
