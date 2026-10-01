@@ -1,0 +1,42 @@
+{
+  "name": "Notification",
+  "type": "object",
+  "properties": {
+    "student_email": {
+      "type": "string",
+      "description": "Recipient student email"
+    },
+    "title": {
+      "type": "string"
+    },
+    "body": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "enrollment_active",
+        "enrollment_completed",
+        "general"
+      ],
+      "default": "general",
+      "description": "What triggered this notification"
+    },
+    "course_title": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string",
+      "description": "Optional in-app route to open when tapped"
+    },
+    "is_read": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "student_email",
+    "title",
+    "body"
+  ]
+}
