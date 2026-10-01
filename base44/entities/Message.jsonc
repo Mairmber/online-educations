@@ -1,0 +1,39 @@
+{
+  "name": "Message",
+  "type": "object",
+  "properties": {
+    "from_name": {
+      "type": "string"
+    },
+    "from_email": {
+      "type": "string"
+    },
+    "to_name": {
+      "type": "string"
+    },
+    "to_email": {
+      "type": "string"
+    },
+    "subject": {
+      "type": "string"
+    },
+    "body": {
+      "type": "string"
+    },
+    "is_read": {
+      "type": "boolean",
+      "default": false
+    },
+    "thread_id": {
+      "type": "string",
+      "description": "Groups messages in a conversation thread"
+    }
+  },
+  "required": [
+    "from_name",
+    "from_email",
+    "to_email",
+    "subject",
+    "body"
+  ]
+}
